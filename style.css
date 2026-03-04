@@ -1,0 +1,252 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #00e0ff, #ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* PACKAGES */
+.packages {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.packages h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* CARDS */
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 224, 255, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    background: #00e0ff;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00bcd4;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* PRODUCT PAGE */
+.product-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+/* PAYMENT FORM ALIGNMENT */
+#paymentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns */
+    gap: 20px;
+}
+
+#paymentForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#paymentForm input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* Make buttons span full width across columns */
+#paymentForm .pay-btn {
+    grid-column: 1 / -1; /* spans both columns */
+    margin-top: 10px;
+}
+
+/* On smaller screens, stack fields vertically */
+@media(max-width: 768px){
+    #paymentForm {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-details {
+    flex: 1;
+    max-width: 500px;
+}
+
+.product-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+}
+/* CENTER QUANTITY COUNTER */
+.quantity {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically (if needed) */
+    gap: 20px;               /* space between buttons and number */
+    margin: 25px 0;
+}
+
+.quantity button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: #00e0ff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.quantity button:hover {
+    background: #00bcd4;
+}
+
+.back-btn {
+    color: #00e0ff;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-img {
+        height: 400px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

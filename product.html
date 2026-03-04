@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Package | Victorious Godswill Travel & Tours Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <img src="Victorious.jpg" alt="Victorious Godswill Logo" class="logo-img">
+        <h1>Victorious Godswill Travel & Tours Ltd</h1>
+    </div>
+</header>
+
+<main class="product-container">
+
+    <!-- PRODUCT IMAGE -->
+    <div class="product-image">
+        <img id="productImage" class="product-img" src="" alt="Travel Package">
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div class="product-details">
+        <h2 id="productTitle"></h2>
+        <p id="productDescription"></p>
+        <p class="rating">⭐⭐⭐⭐⭐ (4.5/5 Rating)</p>
+        <p><strong id="bookedCount">1,245 people</strong> have booked this trip</p>
+        <h3 class="price" id="productPrice"></h3>
+
+        <!-- QUANTITY COUNTER -->
+        <div class="quantity">
+            <button type="button" onclick="decrease()">-</button>
+            <span id="count">1</span>
+            <button type="button" onclick="increase()">+</button>
+        </div>
+
+        <button type="button" class="btn buy-btn">Book Now</button>
+
+        <hr>
+
+        <!-- PAYMENT SECTION -->
+        <h3>Payment Details</h3>
+
+        <form id="paymentForm">
+
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="cardnumber">Card Number</label>
+            <input type="text" 
+                   id="cardnumber"
+                   name="cardnumber"
+                   placeholder="1234 5678 9012 3456"
+                   maxlength="19"
+                   required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="month" id="expiry" name="expiry" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" 
+                   id="cvv"
+                   name="cvv"
+                   maxlength="3"
+                   required>
+
+            <label for="address">Billing Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <h3>Total: $<span id="totalPrice"></span></h3>
+
+            <button type="submit" class="btn pay-btn">
+                Pay Now
+            </button>
+
+        </form>
+
+        <br>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
